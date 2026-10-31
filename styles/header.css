@@ -1,4 +1,4 @@
-header {
+header.top {
   max-width: 80rem;
   width: 100%;
   padding: 1.25rem 2rem;
@@ -7,19 +7,18 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
-img {
+header img {
   width: 2rem;
   height: 2rem;
 
   transition: transform 500ms;
 }
 
-img[src*="logo"]:hover {
+header img[src*="logo"]:hover {
   transform: rotate(90deg);
 }
 
-img[src*="shopping"]:hover {
+header img[src*="shopping"]:hover {
   transform: rotate(-30deg);
 }
 

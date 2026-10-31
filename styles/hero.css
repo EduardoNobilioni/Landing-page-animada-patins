@@ -5,7 +5,8 @@
   margin-inline: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 5rem);
   overflow: hidden;
   & h1 {
     max-width: 40rem;
@@ -36,6 +37,10 @@
 
     animation: slideUp 5s 2s infinite ease;
   }
+}
+
+.hero-copy {
+  flex: 0 1 40rem;
 }
 
 @keyframes slideUp {
@@ -112,14 +117,12 @@
   }
 }
 
-/* Os botões ficam fora de .hero no HTML, por isso os seletores são globais. */
+/* Botões agrupados com o texto para manter o mesmo alinhamento no hero. */
 .buttons {
-  max-width: 80rem;
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin: 3rem auto 0;
-  padding-inline: 2rem;
+  margin: 1.5rem 0 0;
 
   & .button {
     display: flex;
@@ -192,6 +195,41 @@
   }
 }
 
+@keyframes slideInMobile {
+  from {
+    transform: translateX(100vw);
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInStarMobile {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+
+  1% {
+    opacity: 1;
+    transform: translateX(100vw);
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes appear {
   to {
     opacity: 1;
@@ -199,6 +237,7 @@
 }
 section.hero > .content {
   position: relative;
+  isolation: isolate;
   flex: 0 1 30.5rem;
   min-width: 0;
   aspect-ratio: 1;
@@ -213,6 +252,7 @@ section.hero > .content {
     width: 94%;
     top: 3%;
     left: 3%;
+    z-index: 0;
     animation: slideIn 3s ease forwards;
   }
 
@@ -224,6 +264,7 @@ section.hero > .content {
   & img[src*="stars-1"] {
     max-width: 5.5rem;
     top: 30%;
+    left: 0;
     z-index: 2;
     opacity: 0;
     animation:
@@ -236,5 +277,57 @@ section.hero > .content {
     right: 0;
     bottom: 35%;
     animation: slideInStars 2.2s 800ms ease forwards;
+  }
+}
+
+@media (max-width: 900px) {
+  section.hero {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-copy {
+    flex: none;
+    width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  section.hero > .content {
+    flex: none;
+    width: min(100%, 22rem);
+    aspect-ratio: 1;
+    order: -1;
+
+    & img {
+      animation-fill-mode: both;
+    }
+
+    & img[src*="ellipse"] {
+      animation-name: slideInMobile;
+    }
+
+    & img[src*="patins"] {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation-name: slideInMobile;
+    }
+
+    & img[src*="stars-1"] {
+      opacity: 0;
+      animation-name: slideInStarMobile;
+    }
+
+    & img[src*="stars-2"] {
+      animation-name: slideInMobile;
+    }
   }
 }

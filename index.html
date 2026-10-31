@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="top">
       <a href="#logo">
         <img src="assets/logo.svg" alt="logo" />
       </a>
@@ -33,7 +33,7 @@
     </header>
 
     <section class="hero">
-      <div>
+      <div class="hero-copy">
         <h1>
           Snitap, sua vida mais
           <div>
@@ -43,6 +43,19 @@
             <span>radical!</span>
           </div>
         </h1>
+
+        <div class="buttons">
+          <a href="#lojas" class="button buy shadow">
+            <img src="assets/icons/shopping-bag.svg" alt="Sacola de compras" />
+            COMPRAR AGORA
+          </a>
+          <a href="#galeria" class="button play">
+            <span class="shadow"
+              ><img src="assets/icons/play.svg" alt=""
+            /></span>
+            VEJA EM AÇÃO
+          </a>
+        </div>
       </div>
 
       <div class="content">
@@ -53,80 +66,106 @@
       </div>
     </section>
 
-    <div class="buttons">
-      <a href="#lojas" class="button buy shadow">
-        <img src="assets/icons/shopping-bag.svg" alt="Sacola de compras" />
-        COMPRAR AGORA
-      </a>
-      <a href="#galeria" class="button play">
-        <span class="shadow"><img src="assets/icons/play.svg" alt="" /></span>
-        VEJA EM AÇÃO
-      </a>
-    </div>
-
-    <div class="ribbon-space" aria-hidden="true">
-      <div class="ribbon">
-        <div class="ribbon-track">
-          <span class="ribbon-item"
-            >Patins <img src="/assets/Stars 1.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
-          <span class="ribbon-item"
-            >Patins <img src="/assets/fb315.svg" alt=""
-          /></span>
+    <section>
+      <div class="banner">
+        <div class="scroller bg-gradient-animate">
+          <div class="rolling">
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+            <img
+              src="assets/banner.svg"
+              alt="palavra patins e um icone de estrela"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="gallery" id="galeria">
       <header class="gallery-heading">
-        <p>Galeria de fotos</p>
+        <span>GALERIA DE FOTOS</span>
         <h2>#usesnitap por aí</h2>
       </header>
-      <div class="gallery-grid">
+
+      <div class="content">
         <figure class="gallery-card gallery-card-1">
-          <img src="/assets/e2efb.png" alt="Pessoa patinando em uma quadra" />
-        </figure>
-        <figure class="gallery-card gallery-card-2">
           <img
-            src="/assets/0fc0a.png"
+            src="assets/images/01.png"
+            alt="Pessoa patinando em uma quadra"
+          />
+        </figure>
+
+        <figure data-delay class="gallery-card gallery-card-2">
+          <img
+            src="assets/images/02.png"
             alt="Grupo de pessoas patinando em um parque"
           />
         </figure>
+
         <figure class="gallery-card gallery-card-3">
-          <img src="/assets/baa3c.png" alt="Pessoa amarrando os patins" />
+          <img src="assets/images/03.png" alt="Pessoa amarrando os patins" />
         </figure>
-        <figure class="gallery-card gallery-card-4">
-          <img src="/assets/0f70f.png" alt="Patinadora vista de cima" />
+
+        <figure data-delay class="gallery-card gallery-card-4">
+          <img src="assets/images/04.png" alt="Patinadora vista de cima" />
         </figure>
       </div>
     </section>
@@ -178,4 +217,3 @@
     </footer>
   </body>
 </html>
-
