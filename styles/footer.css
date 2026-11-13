@@ -39,6 +39,7 @@ footer {
           transform: scale(1.04);
 
           &::after {
+            opacity: 1;
             transform: scaleX(1);
           }
         }
@@ -55,7 +56,9 @@ footer {
         left: 0;
         opacity: 0;
         transform: scaleX(0);
-        transition: transform 200ms linear;
+        transition:
+          opacity 200ms linear,
+          transform 200ms linear;
       }
     }
 
